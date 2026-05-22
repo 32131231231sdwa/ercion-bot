@@ -1,0 +1,1050 @@
+2026-05-22 09:17:52,363 [CRITICAL] __main__: BOT_TOKEN не задан. Завершение.
+2026-05-22 09:19:19,166 [INFO] __main__: Инициализация базы данных...
+2026-05-22 09:20:10,981 [INFO] __main__: Инициализация базы данных...
+2026-05-22 09:20:12,473 [INFO] models.database: Built-in races seeded
+2026-05-22 09:20:12,473 [INFO] models.database: Database initialized
+2026-05-22 09:20:12,490 [INFO] __main__: Бот Эрцион запускается...
+2026-05-22 09:20:12,491 [INFO] aiogram.dispatcher: Start polling
+2026-05-22 09:20:16,310 [INFO] aiogram.dispatcher: Run polling for bot @Ercion_three_season_bot id=8690052407 - 'Эрцион: III Сезон'
+2026-05-22 09:20:28,354 [WARNING] handlers.start: Sub check failed: Telegram server says - Bad Request: chat not found
+2026-05-22 09:20:29,552 [INFO] aiogram.event: Update id=427270094 is handled. Duration 1692 ms by bot id=8690052407
+2026-05-22 09:20:40,426 [INFO] aiogram.event: Update id=427270095 is handled. Duration 360 ms by bot id=8690052407
+2026-05-22 09:20:44,081 [INFO] aiogram.event: Update id=427270096 is handled. Duration 1320 ms by bot id=8690052407
+2026-05-22 09:20:44,690 [INFO] aiogram.event: Update id=427270097 is handled. Duration 348 ms by bot id=8690052407
+2026-05-22 09:20:49,752 [INFO] aiogram.event: Update id=427270098 is handled. Duration 1331 ms by bot id=8690052407
+2026-05-22 09:20:51,635 [INFO] aiogram.event: Update id=427270099 is handled. Duration 375 ms by bot id=8690052407
+2026-05-22 09:21:10,164 [INFO] aiogram.event: Update id=427270100 is handled. Duration 1729 ms by bot id=8690052407
+2026-05-22 09:21:19,363 [INFO] aiogram.event: Update id=427270101 is handled. Duration 375 ms by bot id=8690052407
+2026-05-22 09:21:24,058 [INFO] aiogram.event: Update id=427270102 is handled. Duration 391 ms by bot id=8690052407
+2026-05-22 09:21:32,553 [INFO] aiogram.event: Update id=427270103 is not handled. Duration 161 ms by bot id=8690052407
+2026-05-22 09:21:32,553 [ERROR] aiogram.event: Cause exception while process update id=427270103 by bot id=8690052407
+TelegramBadRequest: Telegram server says - Bad Request: there is no text in the message to edit
+Traceback (most recent call last):
+  File "/home/runner/workspace/.pythonlibs/lib/python3.11/site-packages/aiogram/dispatcher/dispatcher.py", line 309, in _process_update
+    response = await self.feed_update(bot, update, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/runner/workspace/.pythonlibs/lib/python3.11/site-packages/aiogram/dispatcher/dispatcher.py", line 158, in feed_update
+    response = await self.update.wrap_outer_middleware(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/runner/workspace/.pythonlibs/lib/python3.11/site-packages/aiogram/dispatcher/middlewares/error.py", line 25, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/runner/workspace/.pythonlibs/lib/python3.11/site-packages/aiogram/dispatcher/middlewares/user_context.py", line 56, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/runner/workspace/.pythonlibs/lib/python3.11/site-packages/aiogram/fsm/middleware.py", line 42, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/runner/workspace/.pythonlibs/lib/python3.11/site-packages/aiogram/dispatcher/event/telegram.py", line 121, in trigger
+    return await wrapped_inner(event, kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/runner/workspace/.pythonlibs/lib/python3.11/site-packages/aiogram/dispatcher/event/handler.py", line 43, in call
+    return await wrapped()
+           ^^^^^^^^^^^^^^^
+  File "/home/runner/workspace/.pythonlibs/lib/python3.11/site-packages/aiogram/dispatcher/dispatcher.py", line 276, in _listen_update
+    return await self.propagate_event(update_type=update_type, event=event, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/runner/workspace/.pythonlibs/lib/python3.11/site-packages/aiogram/dispatcher/router.py", line 146, in propagate_event
+    return await observer.wrap_outer_middleware(_wrapped, event=event, data=kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/runner/workspace/.pythonlibs/lib/python3.11/site-packages/aiogram/dispatcher/router.py", line 141, in _wrapped
+    return await self._propagate_event(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/runner/workspace/.pythonlibs/lib/python3.11/site-packages/aiogram/dispatcher/router.py", line 174, in _propagate_event
+    response = await router.propagate_event(update_type=update_type, event=event, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/runner/workspace/.pythonlibs/lib/python3.11/site-packages/aiogram/dispatcher/router.py", line 146, in propagate_event
+    return await observer.wrap_outer_middleware(_wrapped, event=event, data=kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/runner/workspace/.pythonlibs/lib/python3.11/site-packages/aiogram/dispatcher/router.py", line 141, in _wrapped
+    return await self._propagate_event(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/runner/workspace/.pythonlibs/lib/python3.11/site-packages/aiogram/dispatcher/router.py", line 166, in _propagate_event
+    response = await observer.trigger(event, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/runner/workspace/.pythonlibs/lib/python3.11/site-packages/aiogram/dispatcher/event/telegram.py", line 121, in trigger
+    return await wrapped_inner(event, kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/runner/workspace/.pythonlibs/lib/python3.11/site-packages/aiogram/dispatcher/event/handler.py", line 43, in call
+    return await wrapped()
+           ^^^^^^^^^^^^^^^
+  File "/home/runner/workspace/artifacts/ercion-bot/handlers/races.py", line 217, in race_delete
+    await callback.message.edit_text(
+  File "/home/runner/workspace/.pythonlibs/lib/python3.11/site-packages/aiogram/methods/base.py", line 84, in emit
+    return await bot(self)
+           ^^^^^^^^^^^^^^^
+  File "/home/runner/workspace/.pythonlibs/lib/python3.11/site-packages/aiogram/client/bot.py", line 488, in __call__
+    return await self.session(self, method, timeout=request_timeout)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/runner/workspace/.pythonlibs/lib/python3.11/site-packages/aiogram/client/session/base.py", line 254, in __call__
+    return cast(TelegramType, await middleware(bot, method))
+                              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/runner/workspace/.pythonlibs/lib/python3.11/site-packages/aiogram/client/session/aiohttp.py", line 189, in make_request
+    response = self.check_response(
+               ^^^^^^^^^^^^^^^^^^^^
+  File "/home/runner/workspace/.pythonlibs/lib/python3.11/site-packages/aiogram/client/session/base.py", line 120, in check_response
+    raise TelegramBadRequest(method=method, message=description)
+aiogram.exceptions.TelegramBadRequest: Telegram server says - Bad Request: there is no text in the message to edit
+2026-05-22 09:21:39,853 [INFO] aiogram.event: Update id=427270104 is handled. Duration 358 ms by bot id=8690052407
+2026-05-22 09:21:41,712 [INFO] aiogram.event: Update id=427270105 is handled. Duration 455 ms by bot id=8690052407
+2026-05-22 09:21:42,971 [INFO] aiogram.event: Update id=427270106 is handled. Duration 386 ms by bot id=8690052407
+2026-05-22 09:21:45,194 [INFO] aiogram.event: Update id=427270107 is handled. Duration 358 ms by bot id=8690052407
+2026-05-22 09:21:52,107 [INFO] aiogram.event: Update id=427270108 is handled. Duration 366 ms by bot id=8690052407
+2026-05-22 09:21:55,850 [INFO] aiogram.event: Update id=427270109 is handled. Duration 389 ms by bot id=8690052407
+2026-05-22 09:22:00,834 [INFO] aiogram.event: Update id=427270110 is handled. Duration 357 ms by bot id=8690052407
+2026-05-22 09:22:04,307 [INFO] aiogram.event: Update id=427270111 is handled. Duration 353 ms by bot id=8690052407
+2026-05-22 09:22:09,164 [INFO] aiogram.event: Update id=427270112 is not handled. Duration 161 ms by bot id=8690052407
+2026-05-22 09:22:09,164 [ERROR] aiogram.event: Cause exception while process update id=427270112 by bot id=8690052407
+TelegramBadRequest: Telegram server says - Bad Request: there is no text in the message to edit
+Traceback (most recent call last):
+  File "/home/runner/workspace/.pythonlibs/lib/python3.11/site-packages/aiogram/dispatcher/dispatcher.py", line 309, in _process_update
+    response = await self.feed_update(bot, update, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/runner/workspace/.pythonlibs/lib/python3.11/site-packages/aiogram/dispatcher/dispatcher.py", line 158, in feed_update
+    response = await self.update.wrap_outer_middleware(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/runner/workspace/.pythonlibs/lib/python3.11/site-packages/aiogram/dispatcher/middlewares/error.py", line 25, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/runner/workspace/.pythonlibs/lib/python3.11/site-packages/aiogram/dispatcher/middlewares/user_context.py", line 56, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/runner/workspace/.pythonlibs/lib/python3.11/site-packages/aiogram/fsm/middleware.py", line 42, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/runner/workspace/.pythonlibs/lib/python3.11/site-packages/aiogram/dispatcher/event/telegram.py", line 121, in trigger
+    return await wrapped_inner(event, kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/runner/workspace/.pythonlibs/lib/python3.11/site-packages/aiogram/dispatcher/event/handler.py", line 43, in call
+    return await wrapped()
+           ^^^^^^^^^^^^^^^
+  File "/home/runner/workspace/.pythonlibs/lib/python3.11/site-packages/aiogram/dispatcher/dispatcher.py", line 276, in _listen_update
+    return await self.propagate_event(update_type=update_type, event=event, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/runner/workspace/.pythonlibs/lib/python3.11/site-packages/aiogram/dispatcher/router.py", line 146, in propagate_event
+    return await observer.wrap_outer_middleware(_wrapped, event=event, data=kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/runner/workspace/.pythonlibs/lib/python3.11/site-packages/aiogram/dispatcher/router.py", line 141, in _wrapped
+    return await self._propagate_event(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/runner/workspace/.pythonlibs/lib/python3.11/site-packages/aiogram/dispatcher/router.py", line 174, in _propagate_event
+    response = await router.propagate_event(update_type=update_type, event=event, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/runner/workspace/.pythonlibs/lib/python3.11/site-packages/aiogram/dispatcher/router.py", line 146, in propagate_event
+    return await observer.wrap_outer_middleware(_wrapped, event=event, data=kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/runner/workspace/.pythonlibs/lib/python3.11/site-packages/aiogram/dispatcher/router.py", line 141, in _wrapped
+    return await self._propagate_event(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/runner/workspace/.pythonlibs/lib/python3.11/site-packages/aiogram/dispatcher/router.py", line 166, in _propagate_event
+    response = await observer.trigger(event, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/runner/workspace/.pythonlibs/lib/python3.11/site-packages/aiogram/dispatcher/event/telegram.py", line 121, in trigger
+    return await wrapped_inner(event, kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/runner/workspace/.pythonlibs/lib/python3.11/site-packages/aiogram/dispatcher/event/handler.py", line 43, in call
+    return await wrapped()
+           ^^^^^^^^^^^^^^^
+  File "/home/runner/workspace/artifacts/ercion-bot/handlers/races.py", line 217, in race_delete
+    await callback.message.edit_text(
+  File "/home/runner/workspace/.pythonlibs/lib/python3.11/site-packages/aiogram/methods/base.py", line 84, in emit
+    return await bot(self)
+           ^^^^^^^^^^^^^^^
+  File "/home/runner/workspace/.pythonlibs/lib/python3.11/site-packages/aiogram/client/bot.py", line 488, in __call__
+    return await self.session(self, method, timeout=request_timeout)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/runner/workspace/.pythonlibs/lib/python3.11/site-packages/aiogram/client/session/base.py", line 254, in __call__
+    return cast(TelegramType, await middleware(bot, method))
+                              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/runner/workspace/.pythonlibs/lib/python3.11/site-packages/aiogram/client/session/aiohttp.py", line 189, in make_request
+    response = self.check_response(
+               ^^^^^^^^^^^^^^^^^^^^
+  File "/home/runner/workspace/.pythonlibs/lib/python3.11/site-packages/aiogram/client/session/base.py", line 120, in check_response
+    raise TelegramBadRequest(method=method, message=description)
+aiogram.exceptions.TelegramBadRequest: Telegram server says - Bad Request: there is no text in the message to edit
+2026-05-22 09:22:11,459 [INFO] aiogram.event: Update id=427270113 is not handled. Duration 161 ms by bot id=8690052407
+2026-05-22 09:22:11,459 [ERROR] aiogram.event: Cause exception while process update id=427270113 by bot id=8690052407
+TelegramBadRequest: Telegram server says - Bad Request: there is no text in the message to edit
+Traceback (most recent call last):
+  File "/home/runner/workspace/.pythonlibs/lib/python3.11/site-packages/aiogram/dispatcher/dispatcher.py", line 309, in _process_update
+    response = await self.feed_update(bot, update, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/runner/workspace/.pythonlibs/lib/python3.11/site-packages/aiogram/dispatcher/dispatcher.py", line 158, in feed_update
+    response = await self.update.wrap_outer_middleware(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/runner/workspace/.pythonlibs/lib/python3.11/site-packages/aiogram/dispatcher/middlewares/error.py", line 25, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/runner/workspace/.pythonlibs/lib/python3.11/site-packages/aiogram/dispatcher/middlewares/user_context.py", line 56, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/runner/workspace/.pythonlibs/lib/python3.11/site-packages/aiogram/fsm/middleware.py", line 42, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/runner/workspace/.pythonlibs/lib/python3.11/site-packages/aiogram/dispatcher/event/telegram.py", line 121, in trigger
+    return await wrapped_inner(event, kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/runner/workspace/.pythonlibs/lib/python3.11/site-packages/aiogram/dispatcher/event/handler.py", line 43, in call
+    return await wrapped()
+           ^^^^^^^^^^^^^^^
+  File "/home/runner/workspace/.pythonlibs/lib/python3.11/site-packages/aiogram/dispatcher/dispatcher.py", line 276, in _listen_update
+    return await self.propagate_event(update_type=update_type, event=event, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/runner/workspace/.pythonlibs/lib/python3.11/site-packages/aiogram/dispatcher/router.py", line 146, in propagate_event
+    return await observer.wrap_outer_middleware(_wrapped, event=event, data=kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/runner/workspace/.pythonlibs/lib/python3.11/site-packages/aiogram/dispatcher/router.py", line 141, in _wrapped
+    return await self._propagate_event(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/runner/workspace/.pythonlibs/lib/python3.11/site-packages/aiogram/dispatcher/router.py", line 174, in _propagate_event
+    response = await router.propagate_event(update_type=update_type, event=event, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/runner/workspace/.pythonlibs/lib/python3.11/site-packages/aiogram/dispatcher/router.py", line 146, in propagate_event
+    return await observer.wrap_outer_middleware(_wrapped, event=event, data=kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/runner/workspace/.pythonlibs/lib/python3.11/site-packages/aiogram/dispatcher/router.py", line 141, in _wrapped
+    return await self._propagate_event(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/runner/workspace/.pythonlibs/lib/python3.11/site-packages/aiogram/dispatcher/router.py", line 166, in _propagate_event
+    response = await observer.trigger(event, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/runner/workspace/.pythonlibs/lib/python3.11/site-packages/aiogram/dispatcher/event/telegram.py", line 121, in trigger
+    return await wrapped_inner(event, kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/runner/workspace/.pythonlibs/lib/python3.11/site-packages/aiogram/dispatcher/event/handler.py", line 43, in call
+    return await wrapped()
+           ^^^^^^^^^^^^^^^
+  File "/home/runner/workspace/artifacts/ercion-bot/handlers/races.py", line 270, in race_edit_start
+    await callback.message.edit_text(
+  File "/home/runner/workspace/.pythonlibs/lib/python3.11/site-packages/aiogram/methods/base.py", line 84, in emit
+    return await bot(self)
+           ^^^^^^^^^^^^^^^
+  File "/home/runner/workspace/.pythonlibs/lib/python3.11/site-packages/aiogram/client/bot.py", line 488, in __call__
+    return await self.session(self, method, timeout=request_timeout)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/runner/workspace/.pythonlibs/lib/python3.11/site-packages/aiogram/client/session/base.py", line 254, in __call__
+    return cast(TelegramType, await middleware(bot, method))
+                              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/runner/workspace/.pythonlibs/lib/python3.11/site-packages/aiogram/client/session/aiohttp.py", line 189, in make_request
+    response = self.check_response(
+               ^^^^^^^^^^^^^^^^^^^^
+  File "/home/runner/workspace/.pythonlibs/lib/python3.11/site-packages/aiogram/client/session/base.py", line 120, in check_response
+    raise TelegramBadRequest(method=method, message=description)
+aiogram.exceptions.TelegramBadRequest: Telegram server says - Bad Request: there is no text in the message to edit
+2026-05-22 09:22:13,890 [INFO] aiogram.event: Update id=427270114 is handled. Duration 377 ms by bot id=8690052407
+2026-05-22 09:22:15,545 [INFO] aiogram.event: Update id=427270115 is handled. Duration 523 ms by bot id=8690052407
+2026-05-22 09:22:16,258 [INFO] aiogram.event: Update id=427270116 is not handled. Duration 161 ms by bot id=8690052407
+2026-05-22 09:22:16,259 [ERROR] aiogram.event: Cause exception while process update id=427270116 by bot id=8690052407
+TelegramBadRequest: Telegram server says - Bad Request: there is no text in the message to edit
+Traceback (most recent call last):
+  File "/home/runner/workspace/.pythonlibs/lib/python3.11/site-packages/aiogram/dispatcher/dispatcher.py", line 309, in _process_update
+    response = await self.feed_update(bot, update, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/runner/workspace/.pythonlibs/lib/python3.11/site-packages/aiogram/dispatcher/dispatcher.py", line 158, in feed_update
+    response = await self.update.wrap_outer_middleware(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/runner/workspace/.pythonlibs/lib/python3.11/site-packages/aiogram/dispatcher/middlewares/error.py", line 25, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/runner/workspace/.pythonlibs/lib/python3.11/site-packages/aiogram/dispatcher/middlewares/user_context.py", line 56, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/runner/workspace/.pythonlibs/lib/python3.11/site-packages/aiogram/fsm/middleware.py", line 42, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/runner/workspace/.pythonlibs/lib/python3.11/site-packages/aiogram/dispatcher/event/telegram.py", line 121, in trigger
+    return await wrapped_inner(event, kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/runner/workspace/.pythonlibs/lib/python3.11/site-packages/aiogram/dispatcher/event/handler.py", line 43, in call
+    return await wrapped()
+           ^^^^^^^^^^^^^^^
+  File "/home/runner/workspace/.pythonlibs/lib/python3.11/site-packages/aiogram/dispatcher/dispatcher.py", line 276, in _listen_update
+    return await self.propagate_event(update_type=update_type, event=event, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/runner/workspace/.pythonlibs/lib/python3.11/site-packages/aiogram/dispatcher/router.py", line 146, in propagate_event
+    return await observer.wrap_outer_middleware(_wrapped, event=event, data=kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/runner/workspace/.pythonlibs/lib/python3.11/site-packages/aiogram/dispatcher/router.py", line 141, in _wrapped
+    return await self._propagate_event(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/runner/workspace/.pythonlibs/lib/python3.11/site-packages/aiogram/dispatcher/router.py", line 174, in _propagate_event
+    response = await router.propagate_event(update_type=update_type, event=event, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/runner/workspace/.pythonlibs/lib/python3.11/site-packages/aiogram/dispatcher/router.py", line 146, in propagate_event
+    return await observer.wrap_outer_middleware(_wrapped, event=event, data=kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/runner/workspace/.pythonlibs/lib/python3.11/site-packages/aiogram/dispatcher/router.py", line 141, in _wrapped
+    return await self._propagate_event(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/runner/workspace/.pythonlibs/lib/python3.11/site-packages/aiogram/dispatcher/router.py", line 166, in _propagate_event
+    response = await observer.trigger(event, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/runner/workspace/.pythonlibs/lib/python3.11/site-packages/aiogram/dispatcher/event/telegram.py", line 121, in trigger
+    return await wrapped_inner(event, kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/runner/workspace/.pythonlibs/lib/python3.11/site-packages/aiogram/dispatcher/event/handler.py", line 43, in call
+    return await wrapped()
+           ^^^^^^^^^^^^^^^
+  File "/home/runner/workspace/artifacts/ercion-bot/handlers/races.py", line 270, in race_edit_start
+    await callback.message.edit_text(
+  File "/home/runner/workspace/.pythonlibs/lib/python3.11/site-packages/aiogram/methods/base.py", line 84, in emit
+    return await bot(self)
+           ^^^^^^^^^^^^^^^
+  File "/home/runner/workspace/.pythonlibs/lib/python3.11/site-packages/aiogram/client/bot.py", line 488, in __call__
+    return await self.session(self, method, timeout=request_timeout)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/runner/workspace/.pythonlibs/lib/python3.11/site-packages/aiogram/client/session/base.py", line 254, in __call__
+    return cast(TelegramType, await middleware(bot, method))
+                              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/runner/workspace/.pythonlibs/lib/python3.11/site-packages/aiogram/client/session/aiohttp.py", line 189, in make_request
+    response = self.check_response(
+               ^^^^^^^^^^^^^^^^^^^^
+  File "/home/runner/workspace/.pythonlibs/lib/python3.11/site-packages/aiogram/client/session/base.py", line 120, in check_response
+    raise TelegramBadRequest(method=method, message=description)
+aiogram.exceptions.TelegramBadRequest: Telegram server says - Bad Request: there is no text in the message to edit
+2026-05-22 09:22:21,319 [INFO] aiogram.event: Update id=427270117 is handled. Duration 362 ms by bot id=8690052407
+2026-05-22 09:22:23,734 [INFO] aiogram.event: Update id=427270118 is handled. Duration 1474 ms by bot id=8690052407
+2026-05-22 09:22:24,230 [INFO] aiogram.event: Update id=427270119 is handled. Duration 356 ms by bot id=8690052407
+2026-05-22 09:22:25,917 [INFO] aiogram.event: Update id=427270120 is not handled. Duration 161 ms by bot id=8690052407
+2026-05-22 09:22:25,917 [ERROR] aiogram.event: Cause exception while process update id=427270120 by bot id=8690052407
+TelegramBadRequest: Telegram server says - Bad Request: there is no text in the message to edit
+Traceback (most recent call last):
+  File "/home/runner/workspace/.pythonlibs/lib/python3.11/site-packages/aiogram/dispatcher/dispatcher.py", line 309, in _process_update
+    response = await self.feed_update(bot, update, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/runner/workspace/.pythonlibs/lib/python3.11/site-packages/aiogram/dispatcher/dispatcher.py", line 158, in feed_update
+    response = await self.update.wrap_outer_middleware(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/runner/workspace/.pythonlibs/lib/python3.11/site-packages/aiogram/dispatcher/middlewares/error.py", line 25, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/runner/workspace/.pythonlibs/lib/python3.11/site-packages/aiogram/dispatcher/middlewares/user_context.py", line 56, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/runner/workspace/.pythonlibs/lib/python3.11/site-packages/aiogram/fsm/middleware.py", line 42, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/runner/workspace/.pythonlibs/lib/python3.11/site-packages/aiogram/dispatcher/event/telegram.py", line 121, in trigger
+    return await wrapped_inner(event, kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/runner/workspace/.pythonlibs/lib/python3.11/site-packages/aiogram/dispatcher/event/handler.py", line 43, in call
+    return await wrapped()
+           ^^^^^^^^^^^^^^^
+  File "/home/runner/workspace/.pythonlibs/lib/python3.11/site-packages/aiogram/dispatcher/dispatcher.py", line 276, in _listen_update
+    return await self.propagate_event(update_type=update_type, event=event, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/runner/workspace/.pythonlibs/lib/python3.11/site-packages/aiogram/dispatcher/router.py", line 146, in propagate_event
+    return await observer.wrap_outer_middleware(_wrapped, event=event, data=kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/runner/workspace/.pythonlibs/lib/python3.11/site-packages/aiogram/dispatcher/router.py", line 141, in _wrapped
+    return await self._propagate_event(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/runner/workspace/.pythonlibs/lib/python3.11/site-packages/aiogram/dispatcher/router.py", line 174, in _propagate_event
+    response = await router.propagate_event(update_type=update_type, event=event, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/runner/workspace/.pythonlibs/lib/python3.11/site-packages/aiogram/dispatcher/router.py", line 146, in propagate_event
+    return await observer.wrap_outer_middleware(_wrapped, event=event, data=kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/runner/workspace/.pythonlibs/lib/python3.11/site-packages/aiogram/dispatcher/router.py", line 141, in _wrapped
+    return await self._propagate_event(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/runner/workspace/.pythonlibs/lib/python3.11/site-packages/aiogram/dispatcher/router.py", line 166, in _propagate_event
+    response = await observer.trigger(event, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/runner/workspace/.pythonlibs/lib/python3.11/site-packages/aiogram/dispatcher/event/telegram.py", line 121, in trigger
+    return await wrapped_inner(event, kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/runner/workspace/.pythonlibs/lib/python3.11/site-packages/aiogram/dispatcher/event/handler.py", line 43, in call
+    return await wrapped()
+           ^^^^^^^^^^^^^^^
+  File "/home/runner/workspace/artifacts/ercion-bot/handlers/races.py", line 202, in cancel_form
+    await callback.message.edit_text(
+  File "/home/runner/workspace/.pythonlibs/lib/python3.11/site-packages/aiogram/methods/base.py", line 84, in emit
+    return await bot(self)
+           ^^^^^^^^^^^^^^^
+  File "/home/runner/workspace/.pythonlibs/lib/python3.11/site-packages/aiogram/client/bot.py", line 488, in __call__
+    return await self.session(self, method, timeout=request_timeout)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/runner/workspace/.pythonlibs/lib/python3.11/site-packages/aiogram/client/session/base.py", line 254, in __call__
+    return cast(TelegramType, await middleware(bot, method))
+                              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/runner/workspace/.pythonlibs/lib/python3.11/site-packages/aiogram/client/session/aiohttp.py", line 189, in make_request
+    response = self.check_response(
+               ^^^^^^^^^^^^^^^^^^^^
+  File "/home/runner/workspace/.pythonlibs/lib/python3.11/site-packages/aiogram/client/session/base.py", line 120, in check_response
+    raise TelegramBadRequest(method=method, message=description)
+aiogram.exceptions.TelegramBadRequest: Telegram server says - Bad Request: there is no text in the message to edit
+2026-05-22 09:22:37,247 [INFO] aiogram.event: Update id=427270121 is not handled. Duration 161 ms by bot id=8690052407
+2026-05-22 09:22:37,247 [ERROR] aiogram.event: Cause exception while process update id=427270121 by bot id=8690052407
+TelegramBadRequest: Telegram server says - Bad Request: there is no text in the message to edit
+Traceback (most recent call last):
+  File "/home/runner/workspace/.pythonlibs/lib/python3.11/site-packages/aiogram/dispatcher/dispatcher.py", line 309, in _process_update
+    response = await self.feed_update(bot, update, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/runner/workspace/.pythonlibs/lib/python3.11/site-packages/aiogram/dispatcher/dispatcher.py", line 158, in feed_update
+    response = await self.update.wrap_outer_middleware(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/runner/workspace/.pythonlibs/lib/python3.11/site-packages/aiogram/dispatcher/middlewares/error.py", line 25, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/runner/workspace/.pythonlibs/lib/python3.11/site-packages/aiogram/dispatcher/middlewares/user_context.py", line 56, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/runner/workspace/.pythonlibs/lib/python3.11/site-packages/aiogram/fsm/middleware.py", line 42, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/runner/workspace/.pythonlibs/lib/python3.11/site-packages/aiogram/dispatcher/event/telegram.py", line 121, in trigger
+    return await wrapped_inner(event, kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/runner/workspace/.pythonlibs/lib/python3.11/site-packages/aiogram/dispatcher/event/handler.py", line 43, in call
+    return await wrapped()
+           ^^^^^^^^^^^^^^^
+  File "/home/runner/workspace/.pythonlibs/lib/python3.11/site-packages/aiogram/dispatcher/dispatcher.py", line 276, in _listen_update
+    return await self.propagate_event(update_type=update_type, event=event, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/runner/workspace/.pythonlibs/lib/python3.11/site-packages/aiogram/dispatcher/router.py", line 146, in propagate_event
+    return await observer.wrap_outer_middleware(_wrapped, event=event, data=kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/runner/workspace/.pythonlibs/lib/python3.11/site-packages/aiogram/dispatcher/router.py", line 141, in _wrapped
+    return await self._propagate_event(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/runner/workspace/.pythonlibs/lib/python3.11/site-packages/aiogram/dispatcher/router.py", line 174, in _propagate_event
+    response = await router.propagate_event(update_type=update_type, event=event, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/runner/workspace/.pythonlibs/lib/python3.11/site-packages/aiogram/dispatcher/router.py", line 146, in propagate_event
+    return await observer.wrap_outer_middleware(_wrapped, event=event, data=kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/runner/workspace/.pythonlibs/lib/python3.11/site-packages/aiogram/dispatcher/router.py", line 141, in _wrapped
+    return await self._propagate_event(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/runner/workspace/.pythonlibs/lib/python3.11/site-packages/aiogram/dispatcher/router.py", line 166, in _propagate_event
+    response = await observer.trigger(event, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/runner/workspace/.pythonlibs/lib/python3.11/site-packages/aiogram/dispatcher/event/telegram.py", line 121, in trigger
+    return await wrapped_inner(event, kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/runner/workspace/.pythonlibs/lib/python3.11/site-packages/aiogram/dispatcher/event/handler.py", line 43, in call
+    return await wrapped()
+           ^^^^^^^^^^^^^^^
+  File "/home/runner/workspace/artifacts/ercion-bot/handlers/races.py", line 202, in cancel_form
+    await callback.message.edit_text(
+  File "/home/runner/workspace/.pythonlibs/lib/python3.11/site-packages/aiogram/methods/base.py", line 84, in emit
+    return await bot(self)
+           ^^^^^^^^^^^^^^^
+  File "/home/runner/workspace/.pythonlibs/lib/python3.11/site-packages/aiogram/client/bot.py", line 488, in __call__
+    return await self.session(self, method, timeout=request_timeout)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/runner/workspace/.pythonlibs/lib/python3.11/site-packages/aiogram/client/session/base.py", line 254, in __call__
+    return cast(TelegramType, await middleware(bot, method))
+                              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/runner/workspace/.pythonlibs/lib/python3.11/site-packages/aiogram/client/session/aiohttp.py", line 189, in make_request
+    response = self.check_response(
+               ^^^^^^^^^^^^^^^^^^^^
+  File "/home/runner/workspace/.pythonlibs/lib/python3.11/site-packages/aiogram/client/session/base.py", line 120, in check_response
+    raise TelegramBadRequest(method=method, message=description)
+aiogram.exceptions.TelegramBadRequest: Telegram server says - Bad Request: there is no text in the message to edit
+2026-05-22 09:22:39,919 [WARNING] handlers.start: Sub check failed: Telegram server says - Bad Request: chat not found
+2026-05-22 09:22:40,995 [INFO] aiogram.event: Update id=427270122 is handled. Duration 1240 ms by bot id=8690052407
+2026-05-22 09:22:52,407 [INFO] aiogram.event: Update id=427270123 is handled. Duration 397 ms by bot id=8690052407
+2026-05-22 09:22:54,696 [INFO] aiogram.event: Update id=427270124 is handled. Duration 1344 ms by bot id=8690052407
+2026-05-22 09:22:59,080 [INFO] aiogram.event: Update id=427270125 is handled. Duration 346 ms by bot id=8690052407
+2026-05-22 09:23:01,886 [INFO] aiogram.event: Update id=427270126 is not handled. Duration 160 ms by bot id=8690052407
+2026-05-22 09:23:01,886 [ERROR] aiogram.event: Cause exception while process update id=427270126 by bot id=8690052407
+TelegramBadRequest: Telegram server says - Bad Request: there is no text in the message to edit
+Traceback (most recent call last):
+  File "/home/runner/workspace/.pythonlibs/lib/python3.11/site-packages/aiogram/dispatcher/dispatcher.py", line 309, in _process_update
+    response = await self.feed_update(bot, update, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/runner/workspace/.pythonlibs/lib/python3.11/site-packages/aiogram/dispatcher/dispatcher.py", line 158, in feed_update
+    response = await self.update.wrap_outer_middleware(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/runner/workspace/.pythonlibs/lib/python3.11/site-packages/aiogram/dispatcher/middlewares/error.py", line 25, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/runner/workspace/.pythonlibs/lib/python3.11/site-packages/aiogram/dispatcher/middlewares/user_context.py", line 56, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/runner/workspace/.pythonlibs/lib/python3.11/site-packages/aiogram/fsm/middleware.py", line 42, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/runner/workspace/.pythonlibs/lib/python3.11/site-packages/aiogram/dispatcher/event/telegram.py", line 121, in trigger
+    return await wrapped_inner(event, kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/runner/workspace/.pythonlibs/lib/python3.11/site-packages/aiogram/dispatcher/event/handler.py", line 43, in call
+    return await wrapped()
+           ^^^^^^^^^^^^^^^
+  File "/home/runner/workspace/.pythonlibs/lib/python3.11/site-packages/aiogram/dispatcher/dispatcher.py", line 276, in _listen_update
+    return await self.propagate_event(update_type=update_type, event=event, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/runner/workspace/.pythonlibs/lib/python3.11/site-packages/aiogram/dispatcher/router.py", line 146, in propagate_event
+    return await observer.wrap_outer_middleware(_wrapped, event=event, data=kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/runner/workspace/.pythonlibs/lib/python3.11/site-packages/aiogram/dispatcher/router.py", line 141, in _wrapped
+    return await self._propagate_event(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/runner/workspace/.pythonlibs/lib/python3.11/site-packages/aiogram/dispatcher/router.py", line 174, in _propagate_event
+    response = await router.propagate_event(update_type=update_type, event=event, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/runner/workspace/.pythonlibs/lib/python3.11/site-packages/aiogram/dispatcher/router.py", line 146, in propagate_event
+    return await observer.wrap_outer_middleware(_wrapped, event=event, data=kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/runner/workspace/.pythonlibs/lib/python3.11/site-packages/aiogram/dispatcher/router.py", line 141, in _wrapped
+    return await self._propagate_event(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/runner/workspace/.pythonlibs/lib/python3.11/site-packages/aiogram/dispatcher/router.py", line 166, in _propagate_event
+    response = await observer.trigger(event, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/runner/workspace/.pythonlibs/lib/python3.11/site-packages/aiogram/dispatcher/event/telegram.py", line 121, in trigger
+    return await wrapped_inner(event, kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/runner/workspace/.pythonlibs/lib/python3.11/site-packages/aiogram/dispatcher/event/handler.py", line 43, in call
+    return await wrapped()
+           ^^^^^^^^^^^^^^^
+  File "/home/runner/workspace/artifacts/ercion-bot/handlers/races.py", line 202, in cancel_form
+    await callback.message.edit_text(
+  File "/home/runner/workspace/.pythonlibs/lib/python3.11/site-packages/aiogram/methods/base.py", line 84, in emit
+    return await bot(self)
+           ^^^^^^^^^^^^^^^
+  File "/home/runner/workspace/.pythonlibs/lib/python3.11/site-packages/aiogram/client/bot.py", line 488, in __call__
+    return await self.session(self, method, timeout=request_timeout)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/runner/workspace/.pythonlibs/lib/python3.11/site-packages/aiogram/client/session/base.py", line 254, in __call__
+    return cast(TelegramType, await middleware(bot, method))
+                              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/runner/workspace/.pythonlibs/lib/python3.11/site-packages/aiogram/client/session/aiohttp.py", line 189, in make_request
+    response = self.check_response(
+               ^^^^^^^^^^^^^^^^^^^^
+  File "/home/runner/workspace/.pythonlibs/lib/python3.11/site-packages/aiogram/client/session/base.py", line 120, in check_response
+    raise TelegramBadRequest(method=method, message=description)
+aiogram.exceptions.TelegramBadRequest: Telegram server says - Bad Request: there is no text in the message to edit
+2026-05-22 09:23:23,152 [INFO] aiogram.event: Update id=427270127 is not handled. Duration 3 ms by bot id=8690052407
+2026-05-22 09:23:27,854 [INFO] aiogram.event: Update id=427270128 is not handled. Duration 3 ms by bot id=8690052407
+2026-05-22 09:23:35,151 [INFO] aiogram.event: Update id=427270129 is not handled. Duration 2 ms by bot id=8690052407
+2026-05-22 09:23:37,601 [INFO] aiogram.event: Update id=427270130 is not handled. Duration 482 ms by bot id=8690052407
+2026-05-22 09:23:37,601 [ERROR] aiogram.event: Cause exception while process update id=427270130 by bot id=8690052407
+TelegramBadRequest: Telegram server says - Bad Request: there is no text in the message to edit
+Traceback (most recent call last):
+  File "/home/runner/workspace/.pythonlibs/lib/python3.11/site-packages/aiogram/dispatcher/dispatcher.py", line 309, in _process_update
+    response = await self.feed_update(bot, update, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/runner/workspace/.pythonlibs/lib/python3.11/site-packages/aiogram/dispatcher/dispatcher.py", line 158, in feed_update
+    response = await self.update.wrap_outer_middleware(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/runner/workspace/.pythonlibs/lib/python3.11/site-packages/aiogram/dispatcher/middlewares/error.py", line 25, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/runner/workspace/.pythonlibs/lib/python3.11/site-packages/aiogram/dispatcher/middlewares/user_context.py", line 56, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/runner/workspace/.pythonlibs/lib/python3.11/site-packages/aiogram/fsm/middleware.py", line 42, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/runner/workspace/.pythonlibs/lib/python3.11/site-packages/aiogram/dispatcher/event/telegram.py", line 121, in trigger
+    return await wrapped_inner(event, kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/runner/workspace/.pythonlibs/lib/python3.11/site-packages/aiogram/dispatcher/event/handler.py", line 43, in call
+    return await wrapped()
+           ^^^^^^^^^^^^^^^
+  File "/home/runner/workspace/.pythonlibs/lib/python3.11/site-packages/aiogram/dispatcher/dispatcher.py", line 276, in _listen_update
+    return await self.propagate_event(update_type=update_type, event=event, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/runner/workspace/.pythonlibs/lib/python3.11/site-packages/aiogram/dispatcher/router.py", line 146, in propagate_event
+    return await observer.wrap_outer_middleware(_wrapped, event=event, data=kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/runner/workspace/.pythonlibs/lib/python3.11/site-packages/aiogram/dispatcher/router.py", line 141, in _wrapped
+    return await self._propagate_event(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/runner/workspace/.pythonlibs/lib/python3.11/site-packages/aiogram/dispatcher/router.py", line 174, in _propagate_event
+    response = await router.propagate_event(update_type=update_type, event=event, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/runner/workspace/.pythonlibs/lib/python3.11/site-packages/aiogram/dispatcher/router.py", line 146, in propagate_event
+    return await observer.wrap_outer_middleware(_wrapped, event=event, data=kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/runner/workspace/.pythonlibs/lib/python3.11/site-packages/aiogram/dispatcher/router.py", line 141, in _wrapped
+    return await self._propagate_event(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/runner/workspace/.pythonlibs/lib/python3.11/site-packages/aiogram/dispatcher/router.py", line 166, in _propagate_event
+    response = await observer.trigger(event, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/runner/workspace/.pythonlibs/lib/python3.11/site-packages/aiogram/dispatcher/event/telegram.py", line 121, in trigger
+    return await wrapped_inner(event, kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/runner/workspace/.pythonlibs/lib/python3.11/site-packages/aiogram/dispatcher/event/handler.py", line 43, in call
+    return await wrapped()
+           ^^^^^^^^^^^^^^^
+  File "/home/runner/workspace/artifacts/ercion-bot/handlers/races.py", line 202, in cancel_form
+    await callback.message.edit_text(
+  File "/home/runner/workspace/.pythonlibs/lib/python3.11/site-packages/aiogram/methods/base.py", line 84, in emit
+    return await bot(self)
+           ^^^^^^^^^^^^^^^
+  File "/home/runner/workspace/.pythonlibs/lib/python3.11/site-packages/aiogram/client/bot.py", line 488, in __call__
+    return await self.session(self, method, timeout=request_timeout)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/runner/workspace/.pythonlibs/lib/python3.11/site-packages/aiogram/client/session/base.py", line 254, in __call__
+    return cast(TelegramType, await middleware(bot, method))
+                              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/runner/workspace/.pythonlibs/lib/python3.11/site-packages/aiogram/client/session/aiohttp.py", line 189, in make_request
+    response = self.check_response(
+               ^^^^^^^^^^^^^^^^^^^^
+  File "/home/runner/workspace/.pythonlibs/lib/python3.11/site-packages/aiogram/client/session/base.py", line 120, in check_response
+    raise TelegramBadRequest(method=method, message=description)
+aiogram.exceptions.TelegramBadRequest: Telegram server says - Bad Request: there is no text in the message to edit
+2026-05-22 09:23:40,549 [WARNING] handlers.start: Sub check failed: Telegram server says - Bad Request: chat not found
+2026-05-22 09:23:41,653 [INFO] aiogram.event: Update id=427270131 is handled. Duration 1266 ms by bot id=8690052407
+2026-05-22 09:23:45,738 [INFO] aiogram.event: Update id=427270132 is handled. Duration 351 ms by bot id=8690052407
+2026-05-22 09:23:48,516 [INFO] aiogram.event: Update id=427270133 is handled. Duration 190 ms by bot id=8690052407
+2026-05-22 09:23:53,440 [INFO] aiogram.event: Update id=427270134 is handled. Duration 259 ms by bot id=8690052407
+2026-05-22 09:23:58,278 [INFO] aiogram.event: Update id=427270135 is handled. Duration 191 ms by bot id=8690052407
+2026-05-22 09:24:06,945 [WARNING] handlers.races: Could not notify admin 6089338514: Telegram server says - Bad Request: chat not found
+2026-05-22 09:24:07,143 [INFO] aiogram.event: Update id=427270136 is handled. Duration 574 ms by bot id=8690052407
+2026-05-22 09:24:11,568 [INFO] aiogram.event: Update id=427270137 is handled. Duration 548 ms by bot id=8690052407
+2026-05-22 09:24:15,320 [INFO] aiogram.event: Update id=427270138 is handled. Duration 1360 ms by bot id=8690052407
+2026-05-22 09:24:17,230 [INFO] aiogram.event: Update id=427270139 is handled. Duration 357 ms by bot id=8690052407
+2026-05-22 09:24:19,159 [INFO] aiogram.event: Update id=427270140 is handled. Duration 358 ms by bot id=8690052407
+2026-05-22 09:24:20,817 [INFO] aiogram.event: Update id=427270141 is handled. Duration 645 ms by bot id=8690052407
+2026-05-22 09:24:22,687 [INFO] aiogram.event: Update id=427270142 is not handled. Duration 161 ms by bot id=8690052407
+2026-05-22 09:24:22,688 [ERROR] aiogram.event: Cause exception while process update id=427270142 by bot id=8690052407
+TelegramBadRequest: Telegram server says - Bad Request: there is no text in the message to edit
+Traceback (most recent call last):
+  File "/home/runner/workspace/.pythonlibs/lib/python3.11/site-packages/aiogram/dispatcher/dispatcher.py", line 309, in _process_update
+    response = await self.feed_update(bot, update, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/runner/workspace/.pythonlibs/lib/python3.11/site-packages/aiogram/dispatcher/dispatcher.py", line 158, in feed_update
+    response = await self.update.wrap_outer_middleware(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/runner/workspace/.pythonlibs/lib/python3.11/site-packages/aiogram/dispatcher/middlewares/error.py", line 25, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/runner/workspace/.pythonlibs/lib/python3.11/site-packages/aiogram/dispatcher/middlewares/user_context.py", line 56, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/runner/workspace/.pythonlibs/lib/python3.11/site-packages/aiogram/fsm/middleware.py", line 42, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/runner/workspace/.pythonlibs/lib/python3.11/site-packages/aiogram/dispatcher/event/telegram.py", line 121, in trigger
+    return await wrapped_inner(event, kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/runner/workspace/.pythonlibs/lib/python3.11/site-packages/aiogram/dispatcher/event/handler.py", line 43, in call
+    return await wrapped()
+           ^^^^^^^^^^^^^^^
+  File "/home/runner/workspace/.pythonlibs/lib/python3.11/site-packages/aiogram/dispatcher/dispatcher.py", line 276, in _listen_update
+    return await self.propagate_event(update_type=update_type, event=event, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/runner/workspace/.pythonlibs/lib/python3.11/site-packages/aiogram/dispatcher/router.py", line 146, in propagate_event
+    return await observer.wrap_outer_middleware(_wrapped, event=event, data=kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/runner/workspace/.pythonlibs/lib/python3.11/site-packages/aiogram/dispatcher/router.py", line 141, in _wrapped
+    return await self._propagate_event(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/runner/workspace/.pythonlibs/lib/python3.11/site-packages/aiogram/dispatcher/router.py", line 174, in _propagate_event
+    response = await router.propagate_event(update_type=update_type, event=event, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/runner/workspace/.pythonlibs/lib/python3.11/site-packages/aiogram/dispatcher/router.py", line 146, in propagate_event
+    return await observer.wrap_outer_middleware(_wrapped, event=event, data=kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/runner/workspace/.pythonlibs/lib/python3.11/site-packages/aiogram/dispatcher/router.py", line 141, in _wrapped
+    return await self._propagate_event(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/runner/workspace/.pythonlibs/lib/python3.11/site-packages/aiogram/dispatcher/router.py", line 166, in _propagate_event
+    response = await observer.trigger(event, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/runner/workspace/.pythonlibs/lib/python3.11/site-packages/aiogram/dispatcher/event/telegram.py", line 121, in trigger
+    return await wrapped_inner(event, kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/runner/workspace/.pythonlibs/lib/python3.11/site-packages/aiogram/dispatcher/event/handler.py", line 43, in call
+    return await wrapped()
+           ^^^^^^^^^^^^^^^
+  File "/home/runner/workspace/artifacts/ercion-bot/handlers/races.py", line 217, in race_delete
+    await callback.message.edit_text(
+  File "/home/runner/workspace/.pythonlibs/lib/python3.11/site-packages/aiogram/methods/base.py", line 84, in emit
+    return await bot(self)
+           ^^^^^^^^^^^^^^^
+  File "/home/runner/workspace/.pythonlibs/lib/python3.11/site-packages/aiogram/client/bot.py", line 488, in __call__
+    return await self.session(self, method, timeout=request_timeout)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/runner/workspace/.pythonlibs/lib/python3.11/site-packages/aiogram/client/session/base.py", line 254, in __call__
+    return cast(TelegramType, await middleware(bot, method))
+                              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/runner/workspace/.pythonlibs/lib/python3.11/site-packages/aiogram/client/session/aiohttp.py", line 189, in make_request
+    response = self.check_response(
+               ^^^^^^^^^^^^^^^^^^^^
+  File "/home/runner/workspace/.pythonlibs/lib/python3.11/site-packages/aiogram/client/session/base.py", line 120, in check_response
+    raise TelegramBadRequest(method=method, message=description)
+aiogram.exceptions.TelegramBadRequest: Telegram server says - Bad Request: there is no text in the message to edit
+2026-05-22 09:25:37,118 [INFO] aiogram.event: Update id=427270143 is handled. Duration 669 ms by bot id=8690052407
+2026-05-22 09:25:39,457 [INFO] aiogram.event: Update id=427270144 is handled. Duration 1309 ms by bot id=8690052407
+2026-05-22 09:25:41,943 [INFO] aiogram.event: Update id=427270145 is handled. Duration 356 ms by bot id=8690052407
+2026-05-22 09:25:44,020 [INFO] aiogram.event: Update id=427270146 is handled. Duration 1324 ms by bot id=8690052407
+2026-05-22 09:25:45,266 [INFO] aiogram.event: Update id=427270147 is handled. Duration 482 ms by bot id=8690052407
+2026-05-22 09:25:47,947 [INFO] aiogram.event: Update id=427270148 is handled. Duration 1336 ms by bot id=8690052407
+2026-05-22 09:25:49,599 [INFO] aiogram.event: Update id=427270149 is handled. Duration 370 ms by bot id=8690052407
+2026-05-22 09:25:50,523 [INFO] aiogram.event: Update id=427270150 is not handled. Duration 160 ms by bot id=8690052407
+2026-05-22 09:25:50,523 [ERROR] aiogram.event: Cause exception while process update id=427270150 by bot id=8690052407
+TelegramBadRequest: Telegram server says - Bad Request: there is no text in the message to edit
+Traceback (most recent call last):
+  File "/home/runner/workspace/.pythonlibs/lib/python3.11/site-packages/aiogram/dispatcher/dispatcher.py", line 309, in _process_update
+    response = await self.feed_update(bot, update, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/runner/workspace/.pythonlibs/lib/python3.11/site-packages/aiogram/dispatcher/dispatcher.py", line 158, in feed_update
+    response = await self.update.wrap_outer_middleware(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/runner/workspace/.pythonlibs/lib/python3.11/site-packages/aiogram/dispatcher/middlewares/error.py", line 25, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/runner/workspace/.pythonlibs/lib/python3.11/site-packages/aiogram/dispatcher/middlewares/user_context.py", line 56, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/runner/workspace/.pythonlibs/lib/python3.11/site-packages/aiogram/fsm/middleware.py", line 42, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/runner/workspace/.pythonlibs/lib/python3.11/site-packages/aiogram/dispatcher/event/telegram.py", line 121, in trigger
+    return await wrapped_inner(event, kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/runner/workspace/.pythonlibs/lib/python3.11/site-packages/aiogram/dispatcher/event/handler.py", line 43, in call
+    return await wrapped()
+           ^^^^^^^^^^^^^^^
+  File "/home/runner/workspace/.pythonlibs/lib/python3.11/site-packages/aiogram/dispatcher/dispatcher.py", line 276, in _listen_update
+    return await self.propagate_event(update_type=update_type, event=event, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/runner/workspace/.pythonlibs/lib/python3.11/site-packages/aiogram/dispatcher/router.py", line 146, in propagate_event
+    return await observer.wrap_outer_middleware(_wrapped, event=event, data=kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/runner/workspace/.pythonlibs/lib/python3.11/site-packages/aiogram/dispatcher/router.py", line 141, in _wrapped
+    return await self._propagate_event(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/runner/workspace/.pythonlibs/lib/python3.11/site-packages/aiogram/dispatcher/router.py", line 174, in _propagate_event
+    response = await router.propagate_event(update_type=update_type, event=event, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/runner/workspace/.pythonlibs/lib/python3.11/site-packages/aiogram/dispatcher/router.py", line 146, in propagate_event
+    return await observer.wrap_outer_middleware(_wrapped, event=event, data=kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/runner/workspace/.pythonlibs/lib/python3.11/site-packages/aiogram/dispatcher/router.py", line 141, in _wrapped
+    return await self._propagate_event(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/runner/workspace/.pythonlibs/lib/python3.11/site-packages/aiogram/dispatcher/router.py", line 166, in _propagate_event
+    response = await observer.trigger(event, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/runner/workspace/.pythonlibs/lib/python3.11/site-packages/aiogram/dispatcher/event/telegram.py", line 121, in trigger
+    return await wrapped_inner(event, kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/runner/workspace/.pythonlibs/lib/python3.11/site-packages/aiogram/dispatcher/event/handler.py", line 43, in call
+    return await wrapped()
+           ^^^^^^^^^^^^^^^
+  File "/home/runner/workspace/artifacts/ercion-bot/handlers/races.py", line 202, in cancel_form
+    await callback.message.edit_text(
+  File "/home/runner/workspace/.pythonlibs/lib/python3.11/site-packages/aiogram/methods/base.py", line 84, in emit
+    return await bot(self)
+           ^^^^^^^^^^^^^^^
+  File "/home/runner/workspace/.pythonlibs/lib/python3.11/site-packages/aiogram/client/bot.py", line 488, in __call__
+    return await self.session(self, method, timeout=request_timeout)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/runner/workspace/.pythonlibs/lib/python3.11/site-packages/aiogram/client/session/base.py", line 254, in __call__
+    return cast(TelegramType, await middleware(bot, method))
+                              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/runner/workspace/.pythonlibs/lib/python3.11/site-packages/aiogram/client/session/aiohttp.py", line 189, in make_request
+    response = self.check_response(
+               ^^^^^^^^^^^^^^^^^^^^
+  File "/home/runner/workspace/.pythonlibs/lib/python3.11/site-packages/aiogram/client/session/base.py", line 120, in check_response
+    raise TelegramBadRequest(method=method, message=description)
+aiogram.exceptions.TelegramBadRequest: Telegram server says - Bad Request: there is no text in the message to edit
+2026-05-22 09:26:03,754 [INFO] aiogram.event: Update id=427270151 is not handled. Duration 160 ms by bot id=8690052407
+2026-05-22 09:26:03,755 [ERROR] aiogram.event: Cause exception while process update id=427270151 by bot id=8690052407
+TelegramBadRequest: Telegram server says - Bad Request: there is no text in the message to edit
+Traceback (most recent call last):
+  File "/home/runner/workspace/.pythonlibs/lib/python3.11/site-packages/aiogram/dispatcher/dispatcher.py", line 309, in _process_update
+    response = await self.feed_update(bot, update, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/runner/workspace/.pythonlibs/lib/python3.11/site-packages/aiogram/dispatcher/dispatcher.py", line 158, in feed_update
+    response = await self.update.wrap_outer_middleware(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/runner/workspace/.pythonlibs/lib/python3.11/site-packages/aiogram/dispatcher/middlewares/error.py", line 25, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/runner/workspace/.pythonlibs/lib/python3.11/site-packages/aiogram/dispatcher/middlewares/user_context.py", line 56, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/runner/workspace/.pythonlibs/lib/python3.11/site-packages/aiogram/fsm/middleware.py", line 42, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/runner/workspace/.pythonlibs/lib/python3.11/site-packages/aiogram/dispatcher/event/telegram.py", line 121, in trigger
+    return await wrapped_inner(event, kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/runner/workspace/.pythonlibs/lib/python3.11/site-packages/aiogram/dispatcher/event/handler.py", line 43, in call
+    return await wrapped()
+           ^^^^^^^^^^^^^^^
+  File "/home/runner/workspace/.pythonlibs/lib/python3.11/site-packages/aiogram/dispatcher/dispatcher.py", line 276, in _listen_update
+    return await self.propagate_event(update_type=update_type, event=event, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/runner/workspace/.pythonlibs/lib/python3.11/site-packages/aiogram/dispatcher/router.py", line 146, in propagate_event
+    return await observer.wrap_outer_middleware(_wrapped, event=event, data=kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/runner/workspace/.pythonlibs/lib/python3.11/site-packages/aiogram/dispatcher/router.py", line 141, in _wrapped
+    return await self._propagate_event(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/runner/workspace/.pythonlibs/lib/python3.11/site-packages/aiogram/dispatcher/router.py", line 174, in _propagate_event
+    response = await router.propagate_event(update_type=update_type, event=event, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/runner/workspace/.pythonlibs/lib/python3.11/site-packages/aiogram/dispatcher/router.py", line 146, in propagate_event
+    return await observer.wrap_outer_middleware(_wrapped, event=event, data=kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/runner/workspace/.pythonlibs/lib/python3.11/site-packages/aiogram/dispatcher/router.py", line 141, in _wrapped
+    return await self._propagate_event(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/runner/workspace/.pythonlibs/lib/python3.11/site-packages/aiogram/dispatcher/router.py", line 166, in _propagate_event
+    response = await observer.trigger(event, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/runner/workspace/.pythonlibs/lib/python3.11/site-packages/aiogram/dispatcher/event/telegram.py", line 121, in trigger
+    return await wrapped_inner(event, kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/runner/workspace/.pythonlibs/lib/python3.11/site-packages/aiogram/dispatcher/event/handler.py", line 43, in call
+    return await wrapped()
+           ^^^^^^^^^^^^^^^
+  File "/home/runner/workspace/artifacts/ercion-bot/handlers/races.py", line 202, in cancel_form
+    await callback.message.edit_text(
+  File "/home/runner/workspace/.pythonlibs/lib/python3.11/site-packages/aiogram/methods/base.py", line 84, in emit
+    return await bot(self)
+           ^^^^^^^^^^^^^^^
+  File "/home/runner/workspace/.pythonlibs/lib/python3.11/site-packages/aiogram/client/bot.py", line 488, in __call__
+    return await self.session(self, method, timeout=request_timeout)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/runner/workspace/.pythonlibs/lib/python3.11/site-packages/aiogram/client/session/base.py", line 254, in __call__
+    return cast(TelegramType, await middleware(bot, method))
+                              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/runner/workspace/.pythonlibs/lib/python3.11/site-packages/aiogram/client/session/aiohttp.py", line 189, in make_request
+    response = self.check_response(
+               ^^^^^^^^^^^^^^^^^^^^
+  File "/home/runner/workspace/.pythonlibs/lib/python3.11/site-packages/aiogram/client/session/base.py", line 120, in check_response
+    raise TelegramBadRequest(method=method, message=description)
+aiogram.exceptions.TelegramBadRequest: Telegram server says - Bad Request: there is no text in the message to edit
+2026-05-22 09:26:07,702 [WARNING] handlers.start: Sub check failed: Telegram server says - Bad Request: chat not found
+2026-05-22 09:26:08,694 [INFO] aiogram.event: Update id=427270152 is handled. Duration 1152 ms by bot id=8690052407
+2026-05-22 09:26:11,139 [INFO] aiogram.event: Update id=427270153 is handled. Duration 437 ms by bot id=8690052407
+2026-05-22 09:26:16,755 [INFO] aiogram.event: Update id=427270154 is handled. Duration 369 ms by bot id=8690052407
+2026-05-22 09:26:38,546 [INFO] aiogram.event: Update id=427270155 is handled. Duration 498 ms by bot id=8690052407
+2026-05-22 09:26:55,789 [INFO] aiogram.event: Update id=427270156 is handled. Duration 501 ms by bot id=8690052407
+2026-05-22 09:26:59,581 [INFO] aiogram.event: Update id=427270157 is handled. Duration 353 ms by bot id=8690052407
+2026-05-22 09:27:06,536 [INFO] aiogram.event: Update id=427270158 is handled. Duration 1318 ms by bot id=8690052407
+2026-05-22 09:27:11,691 [INFO] aiogram.event: Update id=427270159 is handled. Duration 453 ms by bot id=8690052407
+2026-05-22 09:27:16,533 [INFO] aiogram.event: Update id=427270160 is handled. Duration 1339 ms by bot id=8690052407
+2026-05-22 09:27:18,763 [INFO] aiogram.event: Update id=427270161 is handled. Duration 353 ms by bot id=8690052407
+2026-05-22 09:29:53,875 [INFO] aiogram.event: Update id=427270162 is handled. Duration 1682 ms by bot id=8690052407
+2026-05-22 09:32:06,235 [INFO] aiogram.event: Update id=427270163 is handled. Duration 717 ms by bot id=8690052407
+2026-05-22 09:32:09,663 [INFO] aiogram.event: Update id=427270164 is handled. Duration 1514 ms by bot id=8690052407
+2026-05-22 09:32:11,858 [INFO] aiogram.event: Update id=427270165 is handled. Duration 380 ms by bot id=8690052407
+2026-05-22 09:32:28,904 [INFO] aiogram.event: Update id=427270166 is handled. Duration 1629 ms by bot id=8690052407
+2026-05-22 09:34:08,968 [INFO] aiogram.event: Update id=427270167 is handled. Duration 675 ms by bot id=8690052407
+2026-05-22 09:35:01,391 [INFO] aiogram.event: Update id=427270168 is handled. Duration 1681 ms by bot id=8690052407
+2026-05-22 09:35:06,484 [INFO] aiogram.event: Update id=427270169 is handled. Duration 362 ms by bot id=8690052407
+2026-05-22 09:35:08,742 [INFO] aiogram.event: Update id=427270170 is handled. Duration 1329 ms by bot id=8690052407
+2026-05-22 09:35:51,879 [WARNING] aiogram.dispatcher: Received SIGTERM signal
+2026-05-22 09:35:51,880 [INFO] aiogram.dispatcher: Polling stopped for bot @Ercion_three_season_bot id=8690052407 - 'Эрцион: III Сезон'
+2026-05-22 09:35:51,880 [INFO] aiogram.dispatcher: Polling stopped
+2026-05-22 09:35:52,131 [INFO] __main__: Бот остановлен.
+2026-05-22 09:35:54,673 [INFO] __main__: Инициализация базы данных...
+2026-05-22 09:35:55,033 [INFO] models.database: Database initialized
+2026-05-22 09:35:55,043 [INFO] __main__: Бот Эрцион запускается...
+2026-05-22 09:35:55,043 [INFO] aiogram.dispatcher: Start polling
+2026-05-22 09:35:55,542 [INFO] aiogram.dispatcher: Run polling for bot @Ercion_three_season_bot id=8690052407 - '𝔈𝔯𝔠𝔦𝔬𝔫: 𝔩𝔩𝔩 𝔖𝔢𝔞𝔰𝔬𝔫'
+2026-05-22 09:36:53,149 [INFO] aiogram.event: Update id=427270171 is handled. Duration 771 ms by bot id=8690052407
+2026-05-22 09:36:55,972 [INFO] aiogram.event: Update id=427270172 is handled. Duration 1434 ms by bot id=8690052407
+2026-05-22 09:36:59,698 [INFO] aiogram.event: Update id=427270173 is handled. Duration 371 ms by bot id=8690052407
+2026-05-22 09:37:03,047 [INFO] aiogram.event: Update id=427270174 is handled. Duration 1338 ms by bot id=8690052407
+2026-05-22 09:37:06,797 [INFO] aiogram.event: Update id=427270175 is handled. Duration 376 ms by bot id=8690052407
+2026-05-22 09:37:18,509 [INFO] aiogram.event: Update id=427270176 is handled. Duration 1336 ms by bot id=8690052407
+2026-05-22 09:37:20,256 [INFO] aiogram.event: Update id=427270177 is handled. Duration 503 ms by bot id=8690052407
+2026-05-22 09:37:23,738 [INFO] aiogram.event: Update id=427270178 is handled. Duration 1387 ms by bot id=8690052407
+2026-05-22 09:37:26,133 [INFO] aiogram.event: Update id=427270179 is handled. Duration 355 ms by bot id=8690052407
+2026-05-22 09:37:32,453 [INFO] aiogram.event: Update id=427270180 is handled. Duration 387 ms by bot id=8690052407
+2026-05-22 09:37:43,521 [INFO] aiogram.event: Update id=427270181 is handled. Duration 350 ms by bot id=8690052407
+2026-05-22 09:37:46,279 [INFO] aiogram.event: Update id=427270182 is handled. Duration 1327 ms by bot id=8690052407
+2026-05-22 09:37:50,278 [INFO] aiogram.event: Update id=427270183 is handled. Duration 367 ms by bot id=8690052407
+2026-05-22 09:37:54,990 [INFO] aiogram.event: Update id=427270184 is handled. Duration 1331 ms by bot id=8690052407
+2026-05-22 09:37:58,772 [INFO] aiogram.event: Update id=427270185 is handled. Duration 369 ms by bot id=8690052407
+2026-05-22 09:38:04,732 [INFO] aiogram.event: Update id=427270186 is handled. Duration 1333 ms by bot id=8690052407
+2026-05-22 09:38:12,272 [INFO] aiogram.event: Update id=427270187 is handled. Duration 388 ms by bot id=8690052407
+2026-05-22 09:38:20,955 [INFO] aiogram.event: Update id=427270188 is handled. Duration 1328 ms by bot id=8690052407
+2026-05-22 09:38:23,309 [INFO] aiogram.event: Update id=427270189 is handled. Duration 441 ms by bot id=8690052407
+2026-05-22 09:38:25,872 [INFO] aiogram.event: Update id=427270190 is handled. Duration 423 ms by bot id=8690052407
+2026-05-22 09:41:18,715 [INFO] aiogram.event: Update id=427270191 is handled. Duration 815 ms by bot id=8690052407
+2026-05-22 09:41:21,648 [INFO] aiogram.event: Update id=427270192 is handled. Duration 1329 ms by bot id=8690052407
+2026-05-22 09:41:23,003 [INFO] aiogram.event: Update id=427270193 is handled. Duration 385 ms by bot id=8690052407
+2026-05-22 09:41:31,027 [INFO] aiogram.event: Update id=427270194 is handled. Duration 1412 ms by bot id=8690052407
+2026-05-22 09:41:33,294 [INFO] aiogram.event: Update id=427270195 is handled. Duration 444 ms by bot id=8690052407
+2026-05-22 09:41:35,416 [INFO] aiogram.event: Update id=427270196 is handled. Duration 1333 ms by bot id=8690052407
+2026-05-22 09:41:38,272 [INFO] aiogram.event: Update id=427270197 is handled. Duration 390 ms by bot id=8690052407
+2026-05-22 09:42:08,549 [INFO] aiogram.event: Update id=427270198 is handled. Duration 500 ms by bot id=8690052407
+2026-05-22 09:42:14,119 [INFO] aiogram.event: Update id=427270199 is handled. Duration 367 ms by bot id=8690052407
+2026-05-22 09:42:24,626 [WARNING] handlers.countries: Could not notify admin 6089338514: Telegram server says - Bad Request: can't parse entities: Can't find end tag corresponding to start tag "i"
+2026-05-22 09:42:24,784 [WARNING] handlers.countries: Could not notify admin 1360482515: Telegram server says - Bad Request: can't parse entities: Can't find end tag corresponding to start tag "i"
+2026-05-22 09:42:24,785 [INFO] aiogram.event: Update id=427270200 is handled. Duration 652 ms by bot id=8690052407
+2026-05-22 09:43:28,048 [WARNING] handlers.start: Sub check failed: Telegram server says - Bad Request: chat not found
+2026-05-22 09:43:29,041 [INFO] aiogram.event: Update id=427270201 is handled. Duration 1477 ms by bot id=8690052407
+2026-05-22 09:43:29,901 [INFO] aiogram.event: Update id=427270202 is handled. Duration 360 ms by bot id=8690052407
+2026-05-22 09:43:31,901 [INFO] aiogram.event: Update id=427270203 is handled. Duration 418 ms by bot id=8690052407
+2026-05-22 09:43:34,851 [INFO] aiogram.event: Update id=427270204 is handled. Duration 1488 ms by bot id=8690052407
+2026-05-22 09:43:37,647 [INFO] aiogram.event: Update id=427270205 is handled. Duration 396 ms by bot id=8690052407
+2026-05-22 09:43:39,421 [INFO] aiogram.event: Update id=427270206 is handled. Duration 446 ms by bot id=8690052407
+2026-05-22 09:43:41,649 [INFO] aiogram.event: Update id=427270207 is handled. Duration 1502 ms by bot id=8690052407
+2026-05-22 09:43:43,133 [INFO] aiogram.event: Update id=427270208 is handled. Duration 386 ms by bot id=8690052407
+2026-05-22 09:43:44,148 [INFO] aiogram.event: Update id=427270209 is handled. Duration 362 ms by bot id=8690052407
+2026-05-22 09:43:46,412 [INFO] aiogram.event: Update id=427270210 is handled. Duration 1069 ms by bot id=8690052407
+2026-05-22 09:43:51,670 [INFO] aiogram.event: Update id=427270211 is handled. Duration 673 ms by bot id=8690052407
+2026-05-22 09:43:58,694 [INFO] aiogram.event: Update id=427270212 is handled. Duration 1346 ms by bot id=8690052407
+2026-05-22 09:44:03,637 [INFO] aiogram.event: Update id=427270213 is handled. Duration 356 ms by bot id=8690052407
+2026-05-22 09:44:12,075 [INFO] aiogram.event: Update id=427270214 is not handled. Duration 3 ms by bot id=8690052407
+2026-05-22 09:44:15,834 [INFO] aiogram.event: Update id=427270215 is handled. Duration 1438 ms by bot id=8690052407
+2026-05-22 09:44:18,946 [WARNING] aiogram.dispatcher: Received SIGTERM signal
+2026-05-22 09:44:18,947 [INFO] aiogram.dispatcher: Polling stopped for bot @Ercion_three_season_bot id=8690052407 - '𝔈𝔯𝔠𝔦𝔬𝔫: 𝔩𝔩𝔩 𝔖𝔢𝔞𝔰𝔬𝔫'
+2026-05-22 09:44:18,947 [INFO] aiogram.dispatcher: Polling stopped
+2026-05-22 09:44:19,198 [INFO] __main__: Бот остановлен.
+2026-05-22 09:44:21,684 [INFO] __main__: Инициализация базы данных...
+2026-05-22 09:44:21,718 [INFO] models.database: Database initialized
+2026-05-22 09:44:21,725 [INFO] __main__: Бот Эрцион запускается...
+2026-05-22 09:44:21,726 [INFO] aiogram.dispatcher: Start polling
+2026-05-22 09:44:22,214 [INFO] aiogram.dispatcher: Run polling for bot @Ercion_three_season_bot id=8690052407 - '𝔈𝔯𝔠𝔦𝔬𝔫: 𝔩𝔩𝔩 𝔖𝔢𝔞𝔰𝔬𝔫'
+2026-05-22 09:44:31,510 [INFO] aiogram.event: Update id=427270216 is handled. Duration 701 ms by bot id=8690052407
+2026-05-22 09:44:40,226 [INFO] aiogram.event: Update id=427270217 is handled. Duration 1356 ms by bot id=8690052407
+2026-05-22 09:44:47,159 [INFO] aiogram.event: Update id=427270218 is handled. Duration 372 ms by bot id=8690052407
+2026-05-22 09:44:49,431 [INFO] aiogram.event: Update id=427270219 is handled. Duration 1314 ms by bot id=8690052407
+2026-05-22 09:44:51,309 [INFO] aiogram.event: Update id=427270220 is handled. Duration 367 ms by bot id=8690052407
+2026-05-22 09:44:53,617 [INFO] aiogram.event: Update id=427270221 is handled. Duration 409 ms by bot id=8690052407
+2026-05-22 09:44:54,934 [INFO] aiogram.event: Update id=427270222 is handled. Duration 385 ms by bot id=8690052407
+2026-05-22 09:44:56,276 [INFO] aiogram.event: Update id=427270223 is handled. Duration 534 ms by bot id=8690052407
+2026-05-22 09:44:58,806 [INFO] aiogram.event: Update id=427270224 is handled. Duration 364 ms by bot id=8690052407
+2026-05-22 09:45:01,569 [INFO] aiogram.event: Update id=427270225 is handled. Duration 355 ms by bot id=8690052407
+2026-05-22 09:45:03,320 [INFO] aiogram.event: Update id=427270226 is handled. Duration 357 ms by bot id=8690052407
+2026-05-22 09:45:05,770 [INFO] aiogram.event: Update id=427270227 is handled. Duration 1447 ms by bot id=8690052407
+2026-05-22 09:45:07,862 [INFO] aiogram.event: Update id=427270228 is handled. Duration 407 ms by bot id=8690052407
+2026-05-22 09:45:12,780 [INFO] aiogram.event: Update id=427270229 is handled. Duration 355 ms by bot id=8690052407
+2026-05-22 09:45:25,546 [INFO] aiogram.event: Update id=427270230 is handled. Duration 348 ms by bot id=8690052407
+2026-05-22 09:45:27,763 [INFO] aiogram.event: Update id=427270231 is handled. Duration 379 ms by bot id=8690052407
+2026-05-22 09:45:30,198 [INFO] aiogram.event: Update id=427270232 is handled. Duration 1404 ms by bot id=8690052407
+2026-05-22 09:45:31,783 [INFO] aiogram.event: Update id=427270233 is handled. Duration 357 ms by bot id=8690052407
+2026-05-22 09:45:34,131 [INFO] aiogram.event: Update id=427270234 is handled. Duration 354 ms by bot id=8690052407
+2026-05-22 09:45:41,471 [INFO] aiogram.event: Update id=427270235 is handled. Duration 349 ms by bot id=8690052407
+2026-05-22 09:45:42,641 [INFO] aiogram.event: Update id=427270236 is handled. Duration 409 ms by bot id=8690052407
+2026-05-22 09:45:44,751 [INFO] aiogram.event: Update id=427270237 is handled. Duration 1316 ms by bot id=8690052407
+2026-05-22 09:45:45,932 [INFO] aiogram.event: Update id=427270238 is handled. Duration 388 ms by bot id=8690052407
+2026-05-22 09:45:48,032 [INFO] aiogram.event: Update id=427270239 is handled. Duration 1216 ms by bot id=8690052407
+2026-05-22 09:45:49,417 [INFO] aiogram.event: Update id=427270240 is handled. Duration 403 ms by bot id=8690052407
+2026-05-22 09:45:50,636 [INFO] aiogram.event: Update id=427270241 is handled. Duration 546 ms by bot id=8690052407
+2026-05-22 09:45:55,890 [INFO] aiogram.event: Update id=427270242 is handled. Duration 550 ms by bot id=8690052407
+2026-05-22 09:45:57,151 [INFO] aiogram.event: Update id=427270243 is handled. Duration 369 ms by bot id=8690052407
+2026-05-22 09:45:59,382 [INFO] aiogram.event: Update id=427270244 is handled. Duration 1325 ms by bot id=8690052407
+2026-05-22 09:46:13,139 [INFO] aiogram.event: Update id=427270245 is handled. Duration 494 ms by bot id=8690052407
+2026-05-22 09:46:16,931 [INFO] aiogram.event: Update id=427270246 is handled. Duration 1376 ms by bot id=8690052407
+2026-05-22 09:46:18,435 [INFO] aiogram.event: Update id=427270247 is handled. Duration 364 ms by bot id=8690052407
+2026-05-22 09:46:24,014 [INFO] aiogram.event: Update id=427270248 is handled. Duration 353 ms by bot id=8690052407
+2026-05-22 09:46:25,601 [INFO] aiogram.event: Update id=427270249 is handled. Duration 389 ms by bot id=8690052407
+2026-05-22 09:47:17,458 [WARNING] aiogram.dispatcher: Received SIGTERM signal
+2026-05-22 09:47:17,458 [INFO] aiogram.dispatcher: Polling stopped for bot @Ercion_three_season_bot id=8690052407 - '𝔈𝔯𝔠𝔦𝔬𝔫: 𝔩𝔩𝔩 𝔖𝔢𝔞𝔰𝔬𝔫'
+2026-05-22 09:47:17,459 [INFO] aiogram.dispatcher: Polling stopped
+2026-05-22 09:47:17,709 [INFO] __main__: Бот остановлен.
+2026-05-22 09:47:20,218 [INFO] __main__: Инициализация базы данных...
+2026-05-22 09:47:20,253 [INFO] models.database: Database initialized
+2026-05-22 09:47:20,260 [INFO] __main__: Бот Эрцион запускается...
+2026-05-22 09:47:20,261 [INFO] aiogram.dispatcher: Start polling
+2026-05-22 09:47:20,749 [INFO] aiogram.dispatcher: Run polling for bot @Ercion_three_season_bot id=8690052407 - '𝔈𝔯𝔠𝔦𝔬𝔫: 𝔩𝔩𝔩 𝔖𝔢𝔞𝔰𝔬𝔫'
+2026-05-22 09:47:44,923 [INFO] aiogram.event: Update id=427270250 is handled. Duration 1766 ms by bot id=8690052407
+2026-05-22 09:47:46,291 [INFO] aiogram.event: Update id=427270251 is handled. Duration 365 ms by bot id=8690052407
+2026-05-22 09:47:54,248 [INFO] aiogram.event: Update id=427270252 is handled. Duration 1324 ms by bot id=8690052407
+2026-05-22 09:48:14,342 [INFO] aiogram.event: Update id=427270253 is handled. Duration 757 ms by bot id=8690052407
+2026-05-22 09:48:20,868 [INFO] aiogram.event: Update id=427270254 is handled. Duration 1343 ms by bot id=8690052407
+2026-05-22 09:48:25,647 [INFO] aiogram.event: Update id=427270255 is handled. Duration 366 ms by bot id=8690052407
+2026-05-22 09:48:31,741 [INFO] aiogram.event: Update id=427270256 is handled. Duration 1361 ms by bot id=8690052407
+2026-05-22 09:50:23,752 [INFO] aiogram.event: Update id=427270257 is handled. Duration 980 ms by bot id=8690052407
+2026-05-22 09:50:54,507 [INFO] aiogram.event: Update id=427270258 is handled. Duration 1652 ms by bot id=8690052407
+2026-05-22 09:50:56,230 [INFO] aiogram.event: Update id=427270259 is handled. Duration 383 ms by bot id=8690052407
+2026-05-22 09:51:04,471 [INFO] aiogram.event: Update id=427270260 is handled. Duration 1116 ms by bot id=8690052407
+2026-05-22 09:51:07,228 [INFO] aiogram.event: Update id=427270261 is handled. Duration 405 ms by bot id=8690052407
+2026-05-22 09:51:10,641 [INFO] aiogram.event: Update id=427270262 is handled. Duration 1364 ms by bot id=8690052407
+2026-05-22 09:51:12,270 [INFO] aiogram.event: Update id=427270263 is handled. Duration 360 ms by bot id=8690052407
+2026-05-22 09:51:14,884 [INFO] aiogram.event: Update id=427270264 is handled. Duration 1381 ms by bot id=8690052407
+2026-05-22 09:51:21,759 [INFO] aiogram.event: Update id=427270265 is handled. Duration 355 ms by bot id=8690052407
+2026-05-22 09:53:47,539 [WARNING] aiogram.dispatcher: Received SIGTERM signal
+2026-05-22 09:53:47,539 [INFO] aiogram.dispatcher: Polling stopped for bot @Ercion_three_season_bot id=8690052407 - '𝔈𝔯𝔠𝔦𝔬𝔫: 𝔩𝔩𝔩 𝔖𝔢𝔞𝔰𝔬𝔫'
+2026-05-22 09:53:47,540 [INFO] aiogram.dispatcher: Polling stopped
+2026-05-22 09:53:47,791 [INFO] __main__: Бот остановлен.
+2026-05-22 09:53:50,238 [INFO] __main__: Инициализация базы данных...
+2026-05-22 09:53:50,272 [INFO] models.database: Database initialized
+2026-05-22 09:53:50,279 [INFO] __main__: Бот Эрцион запускается...
+2026-05-22 09:53:50,280 [INFO] aiogram.dispatcher: Start polling
+2026-05-22 09:53:50,773 [INFO] aiogram.dispatcher: Run polling for bot @Ercion_three_season_bot id=8690052407 - '𝔈𝔯𝔠𝔦𝔬𝔫: 𝔩𝔩𝔩 𝔖𝔢𝔞𝔰𝔬𝔫'
+2026-05-22 10:02:08,971 [INFO] aiogram.event: Update id=427270266 is handled. Duration 1699 ms by bot id=8690052407
+2026-05-22 10:02:13,916 [INFO] aiogram.event: Update id=427270267 is handled. Duration 424 ms by bot id=8690052407
+2026-05-22 10:02:17,298 [INFO] aiogram.event: Update id=427270268 is handled. Duration 1348 ms by bot id=8690052407
+2026-05-22 10:02:20,238 [INFO] aiogram.event: Update id=427270269 is not handled. Duration 3 ms by bot id=8690052407
+2026-05-22 10:02:51,488 [INFO] aiogram.event: Update id=427270270 is not handled. Duration 3 ms by bot id=8690052407
+2026-05-22 10:02:56,290 [INFO] aiogram.event: Update id=427270271 is handled. Duration 704 ms by bot id=8690052407
+2026-05-22 10:04:44,232 [WARNING] aiogram.dispatcher: Received SIGTERM signal
+2026-05-22 10:04:44,232 [INFO] aiogram.dispatcher: Polling stopped for bot @Ercion_three_season_bot id=8690052407 - '𝔈𝔯𝔠𝔦𝔬𝔫: 𝔩𝔩𝔩 𝔖𝔢𝔞𝔰𝔬𝔫'
+2026-05-22 10:04:44,232 [INFO] aiogram.dispatcher: Polling stopped
+2026-05-22 10:04:44,483 [INFO] __main__: Бот остановлен.
+2026-05-22 10:04:46,990 [INFO] __main__: Инициализация базы данных...
+2026-05-22 10:04:47,245 [INFO] models.database: Database initialized
+2026-05-22 10:04:47,254 [INFO] __main__: Бот Эрцион запускается...
+2026-05-22 10:04:47,254 [INFO] aiogram.dispatcher: Start polling
+2026-05-22 10:04:47,748 [INFO] aiogram.dispatcher: Run polling for bot @Ercion_three_season_bot id=8690052407 - '𝔈𝔯𝔠𝔦𝔬𝔫: 𝔩𝔩𝔩 𝔖𝔢𝔞𝔰𝔬𝔫'
+2026-05-22 10:05:06,578 [WARNING] handlers.start: Sub check failed: Telegram server says - Bad Request: chat not found
+2026-05-22 10:05:07,584 [INFO] aiogram.event: Update id=427270272 is handled. Duration 1496 ms by bot id=8690052407
+2026-05-22 10:05:14,101 [INFO] aiogram.event: Update id=427270273 is handled. Duration 366 ms by bot id=8690052407
+2026-05-22 10:05:20,141 [INFO] aiogram.event: Update id=427270274 is handled. Duration 1335 ms by bot id=8690052407
+2026-05-22 10:05:21,214 [INFO] aiogram.event: Update id=427270275 is handled. Duration 368 ms by bot id=8690052407
+2026-05-22 10:05:30,253 [INFO] aiogram.event: Update id=427270276 is handled. Duration 192 ms by bot id=8690052407
+2026-05-22 10:05:34,353 [INFO] aiogram.event: Update id=427270277 is handled. Duration 186 ms by bot id=8690052407
+2026-05-22 10:05:39,378 [INFO] aiogram.event: Update id=427270278 is handled. Duration 1342 ms by bot id=8690052407
+2026-05-22 10:05:45,025 [INFO] aiogram.event: Update id=427270279 is handled. Duration 366 ms by bot id=8690052407
+2026-05-22 10:05:58,611 [INFO] aiogram.event: Update id=427270280 is handled. Duration 197 ms by bot id=8690052407
+2026-05-22 10:06:02,087 [INFO] aiogram.event: Update id=427270281 is handled. Duration 235 ms by bot id=8690052407
+2026-05-22 10:06:07,417 [WARNING] handlers.countries: Could not notify admin 6089338514: Telegram server says - Bad Request: can't parse entities: Can't find end tag corresponding to start tag "i"
+2026-05-22 10:06:07,580 [WARNING] handlers.countries: Could not notify admin 1360482515: Telegram server says - Bad Request: can't parse entities: Can't find end tag corresponding to start tag "i"
+2026-05-22 10:06:07,580 [INFO] aiogram.event: Update id=427270282 is handled. Duration 529 ms by bot id=8690052407
+2026-05-22 10:06:27,049 [WARNING] handlers.start: Sub check failed: Telegram server says - Bad Request: chat not found
+2026-05-22 10:06:28,100 [INFO] aiogram.event: Update id=427270283 is handled. Duration 1533 ms by bot id=8690052407
+2026-05-22 10:06:32,596 [INFO] aiogram.event: Update id=427270284 is handled. Duration 571 ms by bot id=8690052407
+2026-05-22 10:06:34,583 [INFO] aiogram.event: Update id=427270285 is handled. Duration 359 ms by bot id=8690052407
+2026-05-22 10:06:36,502 [INFO] aiogram.event: Update id=427270286 is handled. Duration 1102 ms by bot id=8690052407
+2026-05-22 10:06:46,262 [WARNING] handlers.admin: Could not notify admin 6089338514: Telegram server says - Bad Request: chat not found
+2026-05-22 10:06:46,262 [INFO] aiogram.event: Update id=427270287 is handled. Duration 883 ms by bot id=8690052407
+2026-05-22 10:08:21,279 [INFO] aiogram.event: Update id=427270288 is handled. Duration 1637 ms by bot id=8690052407
+2026-05-22 10:08:23,331 [INFO] aiogram.event: Update id=427270289 is handled. Duration 374 ms by bot id=8690052407
+2026-05-22 10:08:24,725 [WARNING] handlers.countries: country_view photo failed: Telegram server says - Bad Request: can't parse entities: Can't find end tag corresponding to start tag "i"
+2026-05-22 10:08:25,443 [INFO] aiogram.event: Update id=427270290 is handled. Duration 883 ms by bot id=8690052407
+2026-05-22 10:08:28,326 [INFO] aiogram.event: Update id=427270291 is handled. Duration 370 ms by bot id=8690052407
+2026-05-22 10:08:29,624 [INFO] aiogram.event: Update id=427270292 is handled. Duration 414 ms by bot id=8690052407
+2026-05-22 10:08:31,828 [INFO] aiogram.event: Update id=427270293 is handled. Duration 1352 ms by bot id=8690052407
+2026-05-22 10:08:33,206 [INFO] aiogram.event: Update id=427270294 is handled. Duration 397 ms by bot id=8690052407
+2026-05-22 10:08:33,951 [WARNING] handlers.countries: country_view photo failed: Telegram server says - Bad Request: can't parse entities: Can't find end tag corresponding to start tag "i"
+2026-05-22 10:08:34,661 [INFO] aiogram.event: Update id=427270295 is handled. Duration 876 ms by bot id=8690052407
+2026-05-22 10:08:37,017 [INFO] aiogram.event: Update id=427270296 is handled. Duration 447 ms by bot id=8690052407
+2026-05-22 10:08:38,728 [INFO] aiogram.event: Update id=427270297 is handled. Duration 359 ms by bot id=8690052407
+2026-05-22 10:10:20,998 [INFO] aiogram.event: Update id=427270298 is handled. Duration 1645 ms by bot id=8690052407
+2026-05-22 10:10:26,661 [INFO] aiogram.event: Update id=427270299 is handled. Duration 358 ms by bot id=8690052407
+2026-05-22 10:10:28,504 [INFO] aiogram.event: Update id=427270300 is handled. Duration 578 ms by bot id=8690052407
+2026-05-22 10:10:59,815 [WARNING] aiogram.dispatcher: Received SIGTERM signal
+2026-05-22 10:10:59,815 [INFO] aiogram.dispatcher: Polling stopped for bot @Ercion_three_season_bot id=8690052407 - '𝔈𝔯𝔠𝔦𝔬𝔫: 𝔩𝔩𝔩 𝔖𝔢𝔞𝔰𝔬𝔫'
+2026-05-22 10:10:59,816 [INFO] aiogram.dispatcher: Polling stopped
+2026-05-22 10:11:00,066 [INFO] __main__: Бот остановлен.
+2026-05-22 10:11:02,583 [INFO] __main__: Инициализация базы данных...
+2026-05-22 10:11:02,621 [INFO] models.database: Database initialized
+2026-05-22 10:11:03,310 [INFO] __main__: Bot commands registered
+2026-05-22 10:11:03,310 [INFO] __main__: Бот Эрцион запускается...
+2026-05-22 10:11:03,311 [INFO] aiogram.dispatcher: Start polling
+2026-05-22 10:11:03,476 [INFO] aiogram.dispatcher: Run polling for bot @Ercion_three_season_bot id=8690052407 - '𝔈𝔯𝔠𝔦𝔬𝔫: 𝔩𝔩𝔩 𝔖𝔢𝔞𝔰𝔬𝔫'
+2026-05-22 10:11:24,893 [INFO] aiogram.event: Update id=427270301 is handled. Duration 1662 ms by bot id=8690052407
+2026-05-22 10:11:26,704 [INFO] aiogram.event: Update id=427270302 is handled. Duration 371 ms by bot id=8690052407
+2026-05-22 10:11:31,187 [INFO] aiogram.event: Update id=427270303 is handled. Duration 1327 ms by bot id=8690052407
+2026-05-22 10:11:35,205 [INFO] aiogram.event: Update id=427270304 is handled. Duration 404 ms by bot id=8690052407
+2026-05-22 10:11:37,928 [INFO] aiogram.event: Update id=427270305 is handled. Duration 182 ms by bot id=8690052407
+2026-05-22 10:11:46,064 [INFO] aiogram.event: Update id=427270306 is handled. Duration 229 ms by bot id=8690052407
+2026-05-22 10:11:52,915 [INFO] aiogram.event: Update id=427270307 is handled. Duration 231 ms by bot id=8690052407
+2026-05-22 10:12:08,409 [WARNING] handlers.races: Could not notify admin 6089338514: Telegram server says - Bad Request: chat not found
+2026-05-22 10:12:08,613 [INFO] aiogram.event: Update id=427270308 is handled. Duration 952 ms by bot id=8690052407
+2026-05-22 10:12:12,624 [WARNING] handlers.admin: Could not notify admin 6089338514: Telegram server says - Bad Request: chat not found
+2026-05-22 10:12:12,624 [INFO] aiogram.event: Update id=427270309 is handled. Duration 755 ms by bot id=8690052407
+2026-05-22 10:12:15,472 [INFO] aiogram.event: Update id=427270310 is handled. Duration 1397 ms by bot id=8690052407
+2026-05-22 10:12:16,713 [INFO] aiogram.event: Update id=427270311 is handled. Duration 355 ms by bot id=8690052407
+2026-05-22 10:12:18,150 [INFO] aiogram.event: Update id=427270312 is handled. Duration 540 ms by bot id=8690052407
+2026-05-22 10:12:20,257 [INFO] aiogram.event: Update id=427270313 is handled. Duration 354 ms by bot id=8690052407
+2026-05-22 10:12:21,706 [INFO] aiogram.event: Update id=427270314 is handled. Duration 381 ms by bot id=8690052407
+2026-05-22 10:12:24,032 [INFO] aiogram.event: Update id=427270315 is handled. Duration 1319 ms by bot id=8690052407

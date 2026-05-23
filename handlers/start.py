@@ -31,9 +31,12 @@ async def get_or_create_user(user_id: int, username: str, first_name: str):
         result = await session.execute(select(User).where(User.telegram_id == user_id))
         user = result.scalar_one_or_none()
         if not user:
-            user = User(telegram_id=user_id, username=username, first_name=first_name)
-            session.add(user)
-            await session.commit()
+            try:
+                user = User(telegram_id=user_id, username=username, first_name=first_name)
+                session.add(user)
+                await session.commit()
+            except Exception:
+                await session.rollback()
         return user
 
 
